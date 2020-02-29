@@ -12,7 +12,8 @@ namespace Paint
     public partial class Form1 : Form
     {
         Graphics graphics;
-        Pen pen;
+        public static Pen pen;
+
         int x = -1;
         int y = -1;
         bool isMoving = false;
@@ -20,10 +21,11 @@ namespace Paint
         public Form1()
         {
             InitializeComponent();
+            this.Cursor = new Cursor("PENCIL.CUR");
             graphics = panel1.CreateGraphics();
             panel1.BackColor = Color.White;
             graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-            pen = new Pen(Color.Violet, 5);
+            pen = new Pen(Color.Violet);
             pen.StartCap = pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
         }
 
@@ -67,12 +69,7 @@ namespace Paint
         private void толщинаЛинийToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
-            if (form2.ShowDialog() == DialogResult.OK)
-            {
-                form2.ShowDialog();
-                
-            }
-            pen.Width = (float)form2.ValueForm;
+            form2.ShowDialog(this);       
         }
     }
 }

@@ -11,18 +11,11 @@ namespace Paint
 {
     public partial class Form2 : Form
     {
-        int i;
-
-        public decimal ValueForm
-        {
-            get { return numericUpDown1.Value; }
-            set { numericUpDown1.Value = value; }
-        }
-
 
         public Form2()
         {
             InitializeComponent();
+            numericUpDown1.Value = (int)Form1.pen.Width;
         }
 
         private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
@@ -40,13 +33,13 @@ namespace Paint
         private void button2_Click(object sender, EventArgs e)
         {
             numericUpDown1.Value = Int32.Parse(numericUpDown1.Text);
-            ValueForm = numericUpDown1.Value;
-            this.Hide();
+            Form1.pen.Width = float.Parse(numericUpDown1.Text);
+            this.Close();          
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
     }
 }
