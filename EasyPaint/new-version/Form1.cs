@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +31,7 @@ namespace Paint
 
         private void цветToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            colorDialog1.Color = pen.Color;
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
                 pen.Color = colorDialog1.Color;

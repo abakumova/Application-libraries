@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 namespace Paint
 {
     partial class Form2
@@ -34,12 +34,13 @@ namespace Paint
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.label1 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(220, 256);
+            this.button1.Location = new System.Drawing.Point(233, 336);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 23);
             this.button1.TabIndex = 0;
@@ -49,7 +50,7 @@ namespace Paint
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(26, 256);
+            this.button2.Location = new System.Drawing.Point(39, 336);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -60,7 +61,7 @@ namespace Paint
             // hScrollBar1
             // 
             this.hScrollBar1.LargeChange = 1;
-            this.hScrollBar1.Location = new System.Drawing.Point(26, 197);
+            this.hScrollBar1.Location = new System.Drawing.Point(39, 277);
             this.hScrollBar1.Minimum = 1;
             this.hScrollBar1.Name = "hScrollBar1";
             this.hScrollBar1.Size = new System.Drawing.Size(328, 24);
@@ -72,7 +73,7 @@ namespace Paint
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 141);
+            this.label1.Location = new System.Drawing.Point(58, 224);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 17);
             this.label1.TabIndex = 3;
@@ -80,7 +81,7 @@ namespace Paint
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(180, 136);
+            this.numericUpDown1.Location = new System.Drawing.Point(212, 219);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown1.TabIndex = 4;
@@ -90,11 +91,19 @@ namespace Paint
             0,
             0});
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(24, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(335, 162);
+            this.panel1.TabIndex = 5;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 340);
+            this.ClientSize = new System.Drawing.Size(390, 392);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.hScrollBar1);
@@ -117,6 +126,7 @@ namespace Paint
         private System.Windows.Forms.HScrollBar hScrollBar1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Panel panel1;
 
         public System.Windows.Forms.HScrollBar HScrollBar1 { get => hScrollBar1; }
         public System.Windows.Forms.Button Button1 { get => button1; }
